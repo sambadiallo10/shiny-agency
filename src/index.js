@@ -9,10 +9,18 @@ import FreelanceForm from './components/freelanceForm'
 import Error from './components/error/index'
 import Results from './pages/results'
 import Freelances from './pages/freelances'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  div {
+    font-family: 'Trebuchet MS', Helvetica, sans-seif;
+  }
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyle/>
       <Header />
       <Routes>
         <Route path="/" element={<Home/>}/>
